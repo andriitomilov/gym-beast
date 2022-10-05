@@ -360,3 +360,31 @@ h1 {
 .faq__text {
   color: var(--color-shadow);
 }
+
+/* --------request--------- */
+.request {
+  background-image: url(../images/request-img-4.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.request__title {
+  max-width: 407px;
+  margin-bottom: 24px;
+}
+.request__text {
+  margin-bottom: 72px;
+  max-width: 435px;
+
+  line-height: 1.2;
+}
+
+.request__btn {
+  padding: 15px 25px;
+
+  font-size: 32px;
+  line-height: 1.22;
+  text-transform: uppercase;
+  
+  border-radius: 36px;
+}
