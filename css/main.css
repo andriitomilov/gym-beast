@@ -288,7 +288,7 @@ h1 {
   margin-bottom: 53px;
   padding-left: 18px;
 }
-.course__list .course__item:not(:last-child){
+.course__list .course__item:not(:last-child) {
   margin-bottom: 30px;
 }
 .course__item::marker {
@@ -299,15 +299,13 @@ h1 {
 
   color: var(--color-shadow);
 }
-.price {
-}
 
 .price__item {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.price .price__item:not(:last-child){
+.price .price__item:not(:last-child) {
   margin-bottom: 35px;
 }
 
@@ -322,8 +320,8 @@ h1 {
 .price__item p {
   max-width: 156px;
 }
-.text-width{
- max-width: 430px;
+.text-width {
+  max-width: 430px;
 }
 
 .course__btn {
@@ -332,3 +330,33 @@ h1 {
   border-radius: 36px;
 }
 
+/* -----------FAQ---------------- */
+.faq {
+}
+.faq__title {
+  margin-bottom: 55px;
+
+  text-align: center;
+}
+.faq__list {
+  max-width: 835px;
+  margin: 0 auto;
+}
+.faq__item {
+  padding: 30px 0;
+  border-bottom: 1px solid var(--color-shadow);
+}
+.faq__list .faq__item:first-child {
+  border-top: 1px solid var(--color-shadow);
+}
+.faq__subtitle {
+  margin-bottom: 30px;
+
+  font-family: var(--font-family-heading);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.22;
+}
+.faq__text {
+  color: var(--color-shadow);
+}
