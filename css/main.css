@@ -230,3 +230,32 @@ h1 {
   text-align: center;
 }
 
+/* ------------goods---------------- */
+.goods {
+  background-color: var(--bg-color-secondary);
+
+  color: var(--color-secondary);
+}
+.goods__box {
+  display: flex;
+  justify-content: space-between;
+}
+.goods__img {
+}
+.goods__content {
+  width: calc((100% - 30px) / 2);
+  align-self: center;
+}
+.goods__title {
+  color: var(--color-secondary);
+  margin-bottom: 25px;
+}
+
+.goods__text {
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+.goods__content .goods__text:last-child{
+  margin-bottom: 0;
+}
+
