@@ -9,13 +9,14 @@
   --color-logo-span: #ff0000;
 
   --bg-color-primary: #000000;
-
+  --bg-color-secondary: #ffffff;
   --font-family-primary: "Inter", sans-serif;
   --font-family-heading: "Roboto", sans-serif;
 }
 
 body {
   color: var(--color-primary);
+  background-color: var(--bg-color-primary);
 
   font-family: var(--font-family-primary);
   font-size: 20px;
@@ -32,6 +33,11 @@ h4,
 p,
 ul {
   margin: 0;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 /* --------------general classes------------ */
@@ -50,10 +56,17 @@ ul {
 .section-large {
   padding: 225px 0 271px;
 }
-/* -------------header------------- */
-.header {
-  background-color: var(--bg-color-primary);
+.title {
+  color: var(--color-accent-heading);
+
+  font-family: var(--font-family-heading);
+  font-size: 36px;
+  line-height: 1.17;
+  text-transform: uppercase;
 }
+
+/* -------------header------------- */
+
 .header-flex {
   display: flex;
   align-items: center;
@@ -119,11 +132,10 @@ ul {
 /* ----------hero section------------ */
 
 .hero {
-  background-color: var(--bg-color-primary);
-    background-image: url(../images/hero-bg.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+  background-image: url(../images/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   text-align: center;
 }
 h1 {
@@ -147,17 +159,74 @@ h1 {
 }
 
 .hero__btn {
-    padding: 19px 24px;
+  padding: 19px 24px;
 
-    font-size: 26px;
-    line-height: 1.15;
+  font-size: 26px;
+  line-height: 1.15;
 
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.29);
-    border-radius: 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.29);
+  border-radius: 10px;
 }
 
 /* --------hover/focus */
 .btn:hover,
-.btn :focus{
-    background-color: var(--color-accent-link);
+.btn :focus {
+  background-color: var(--color-accent-link);
 }
+
+/* ------------about------------- */
+.about {
+  background-image: url(../images/about-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+}
+
+.about__text {
+  width: 570px;
+  margin-bottom: 30px;
+
+  line-height: 1.2;
+}
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.about__title {
+  width: 370px;
+  margin-bottom: 30px;
+}
+
+/*----------benefits-------------------  */
+
+.benefits__title {
+  margin-bottom: 58px;
+  text-align: right;
+}
+.card__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  
+}
+
+.card__item {
+  flex-basis: calc((100% - 90px)/4);
+
+  background-color: var(--bg-color-secondary);
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  overflow: hidden;
+}
+
+.card__content {
+  padding: 25px 25px;
+
+  color: var(--color-secondary);
+  
+  line-height: 1.2;
+  text-align: center;
+}
+
