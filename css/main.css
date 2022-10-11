@@ -375,8 +375,6 @@ h1 {
   border-top: 1px solid var(--color-shadow);
 }
 .faq__subtitle {
-  margin-bottom: 30px;
-
   font-family: var(--font-family-heading);
   font-weight: 700;
   font-size: 36px;
@@ -384,6 +382,7 @@ h1 {
 }
 .faq__text {
   color: var(--color-shadow);
+  margin-top: 30px;
 }
 
 /* --------request--------- */

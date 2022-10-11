@@ -214,7 +214,7 @@
         <section class="faq section">
             <div class="container">
                 <h2 class="title faq__title">ЗАПИТАННЯ-ВІДПОВІДЬ</h2>
-                <ul class="faq__list list">
+                <ul class="faq__list list" id="accordion">
                     <li class="faq__item">
                         <h3 class="faq__subtitle">Скільки часу триває програма</h3>
                         <p class="faq__text">4-8 тиждня в залежності від програми</p>
@@ -296,6 +296,17 @@
 
         </div>
     </footer>
+
+    <!--  -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#accordion").accordion({
+                event: "mouseover"
+            });
+        });
+    </script>
 </body>
 
 </html>
