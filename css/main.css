@@ -11,6 +11,7 @@
   --bg-color-primary: #000000;
   --bg-color-secondary: #ffffff;
   --bg-color-filter: #f5f4fa;
+  --bg-color-social-link: #272727;
   --font-family-primary: "Inter", sans-serif;
   --font-family-heading: "Roboto", sans-serif;
 }
@@ -132,7 +133,16 @@ img {
 }
 
 .contacts__link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
   color: var(--color-shadow);
+}
+
+.icon-envelope,
+.icon-smartphone{
+  fill: currentColor;
 }
 
 /* -------------hover/focus---------- */
@@ -229,7 +239,7 @@ h1 {
 
   background-color: var(--bg-color-secondary);
   border-radius: 4px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  
 
   overflow: hidden;
 }
@@ -432,6 +442,12 @@ h1 {
   flex-basis: calc((100% - 60px) / 3);
   
 }
+.portfolio .card__item:hover,
+.portfolio .card__item:focus{
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
 .portfolio .card__content{
   text-align-last: left;
 
@@ -489,10 +505,31 @@ h1 {
   text-transform: uppercase;
 }
 .social {
+  display: flex;
+  gap: 15px;
+
 }
-.list {
+
+
+.social__link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 44px;
+  height: 44px;
+
+  background-color: var(--bg-color-social-link);
+  border-radius: 50%;
 }
-.social__list {
+
+.icon{
+  fill: var(--color-primary);
+}
+
+.social__link:hover,
+.social__link:focus{
+  background-color: var(--color-accent-link);
 }
 
 .form__input {
