@@ -195,7 +195,7 @@ h1 {
 
 /* --------hover/focus */
 .btn:hover,
-.btn :focus {
+.btn:focus {
   background-color: var(--color-accent-link);
 }
 
@@ -434,7 +434,8 @@ h1 {
   color: var(--color-secondary);
   border-radius: 4px;
 }
-.btn-filter:hover {
+.btn-filter:hover,
+.btn-filter:focus {
   color: var(--color-primary);
 }
 
@@ -442,8 +443,7 @@ h1 {
   flex-basis: calc((100% - 60px) / 3);
   
 }
-.portfolio .card__item:hover,
-.portfolio .card__item:focus{
+.portfolio .card__item:hover{
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
