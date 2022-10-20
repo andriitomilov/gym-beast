@@ -7,6 +7,7 @@
   --color-accent-btn: rgba(255, 0, 138, 0.7);
   --color-accent-link: #ff008a;
   --color-logo-span: #ff0000;
+  --color-modal-btn: rgba(0, 0, 0, 0.7);
 
   --bg-color-primary: #000000;
   --bg-color-secondary: #ffffff;
@@ -722,7 +723,7 @@ h1 {
 }
 
 .is-hidden .modal{
-  transform: translate(-50%, -50%) scale(1.2);
+  transform: translate(-50%, -50%) scale(1.6);
   opacity: 0;
 
 }
@@ -732,13 +733,27 @@ h1 {
   justify-content: center;
   align-items: center;
 
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   margin-left: auto;
+  padding: 0;
 
-  border: 1px solid var(--color-shadow);
+  border: 1px solid var(--color-modal-btn);
   border-radius: 50%;
 
   background-color: transparent;
   
+  transition: border-color var(--transition-time) var(--transition-function);
+}
+
+.modal-icon{
+  fill: var(--color-modal-btn);
+  transition: fill var(--transition-time) var(--transition-function);
+}
+
+.modal-btn:hover {
+  border-color: var(--bg-color-primary);
+}
+.modal-btn:hover .modal-icon{
+  fill: var(--bg-color-primary);
 }
