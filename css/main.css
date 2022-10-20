@@ -14,6 +14,8 @@
   --bg-color-social-link: #272727;
   --bg-color-benefits-thumb: rgba(0, 0, 0, 0.5);
   --bg-color-product: rgba(255, 0, 138, 0.8);
+  --bg-color-backdrop:rgba(0, 0, 0,0.4);
+
   --font-family-primary: "Inter", sans-serif;
   --font-family-heading: "Roboto", sans-serif;
   --transition-time: 250ms;
@@ -129,6 +131,7 @@ img {
   color: var(--color-primary);
 }
 
+
 .contacts {
   display: flex;
   margin-left: auto;
@@ -159,6 +162,7 @@ img {
 .contacts__link:focus {
   color: var(--color-accent-link);
 }
+
 
 /* ----------hero section------------ */
 
@@ -680,4 +684,61 @@ h1 {
 
 .padding-top {
   padding-top: 15px;
+}
+
+/* ------------MODAL------------- */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--bg-color-backdrop);
+  transition: opacity var(--transition-time) var(--transition-function);
+  opacity: 1;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 500px;
+  height: 500px;
+  padding: 10px;
+
+  background-color: #ffffff;
+
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform var(--transition-time) var(--transition-function), opacity var(--transition-time) var(--transition-function);
+  opacity: 1;
+}
+
+.is-hidden{
+  opacity: 0;
+  pointer-events: none;
+}
+
+.is-hidden .modal{
+  transform: translate(-50%, -50%) scale(1.2);
+  opacity: 0;
+
+}
+
+.modal-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30px;
+  height: 30px;
+  margin-left: auto;
+
+  border: 1px solid var(--color-shadow);
+  border-radius: 50%;
+
+  background-color: transparent;
+  
 }
