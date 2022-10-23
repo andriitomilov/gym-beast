@@ -469,12 +469,46 @@ h1 {
   border-top: 1px solid var(--color-shadow);
 }
 .faq__subtitle {
+  position: relative;
   font-family: var(--font-family-heading);
   font-weight: 700;
   font-size: 36px;
   line-height: 1.22;
 }
+.faq__subtitle:before,
+.faq__subtitle:after{
+  content:"";
+  position: absolute;
+  top: 50%;
+
+  display: block;
+
+  background-color: var(--bg-color-secondary);
+
+  transform: translateY(-50%) rotate(0);
+  transition: background-color 350ms var(--transition-function),
+  transform 350ms var(--transition-function);
+}
+.faq__subtitle:before{
+  right: 0;
+  
+  width: 20px;
+  height: 2px; 
+}
+.faq__subtitle.active:before,
+.faq__subtitle.active:after{
+  background-color: var(--color-accent-link);
+  transform: translateY(-50%) rotate(180deg);
+}
+
+.faq__subtitle:after{
+  right: 9px;
+
+  width: 2px;
+  height: 20px;
+}
 .faq__text {
+  display: none;
   color: var(--color-shadow);
   margin-top: 30px;
 }
@@ -667,6 +701,7 @@ h1 {
   padding: 10px 10px;
   margin-bottom: 30px;
 
+  color: var(--bg-color-secondary);
   background-color: transparent;
 
   border: 1px solid rgba(255, 255, 255, 0.5);
