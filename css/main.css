@@ -894,6 +894,54 @@ h1 {
   top: 25px;
   left: 40px;
 }
+.checkbox {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  font-size: 14px;
+
+  color: var(--color-secondary);
+}
+
+.checkbox__mark{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 15px;
+  margin-right: 10px;
+
+  border: 1px solid var(--color-secondary);
+  border-radius: 4px;
+
+  transition: outline var(--transition-time) var(--transition-function), 
+  border-color var(--transition-time) var(--transition-function),
+  background-color var(--transition-time) var(--transition-function);
+}
+.checkbox__icon{
+  fill: var(--color-primary);
+}
+.checkbox__input:focus + .checkbox__mark{
+  outline: var(--color-accent-link);
+  border-color: var(--color-accent-link);
+}
+.checkbox__input:checked + .checkbox__mark {
+  background-color: var(--color-accent-link);
+  border-color: var(--color-accent-link);
+}
+
+.checkbox__link{
+  text-decoration: underline;
+  color: var(--color-accent-btn);
+
+  transition: color var(--transition-time) var(--transition-function);
+}
+
+.checkbox__link:hover {
+  color: var(--color-accent-link);
+}
+
 .modal__btn{
   padding: 15px;
 
