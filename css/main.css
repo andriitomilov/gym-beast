@@ -63,7 +63,7 @@ img {
 .section {
   padding: 85px 0;
 }
-.section-large {
+.section--large {
   padding: 225px 0 271px;
 }
 .title {
@@ -90,7 +90,8 @@ img {
 
 /* -------------header------------- */
 
-.header-flex {
+
+.container__header{
   display: flex;
   align-items: center;
 }
@@ -100,7 +101,6 @@ img {
 }
 .logo {
   display: block;
-  margin-right: 83px;
 
   color: var(--color-primary);
 
@@ -108,8 +108,11 @@ img {
   font-size: 36px;
   line-height: 1.42;
 }
-.logo span {
+.logo--red{
   color: var(--color-logo-span);
+}
+.nav__logo{
+  margin-right: 83px;
 }
 .nav__list {
   display: flex;
@@ -151,8 +154,7 @@ img {
   color: var(--color-shadow);
 }
 
-.icon-envelope,
-.icon-smartphone {
+.contacts__icon{
   fill: currentColor;
 }
 
@@ -172,7 +174,7 @@ img {
   text-align: center;
 }
 
-.hero-overlay {
+.hero__overlay {
   max-width: 1440px;
   height: 777px;
 
@@ -230,8 +232,6 @@ h1 {
 }
 
 /* ------------about------------- */
-.about {
-}
 
 .about__overlay {
   margin: 0 auto;
@@ -257,7 +257,7 @@ h1 {
 
   line-height: 1.2;
 }
-.mb-0 {
+.about__text--no-margin-bottom{
   margin-bottom: 0;
 }
 
@@ -272,26 +272,26 @@ h1 {
   margin-bottom: 58px;
   text-align: right;
 }
-.card__list {
+.card-set {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
 }
 
-.card__item {
-  flex-basis: calc((100% - 90px) / 4);
-
+.card-set__item {
   background-color: var(--bg-color-secondary);
   border-radius: 4px;
 
   overflow: hidden;
 }
-.card__thumb{
-  position: relative;
 
+.card-set__item--four-cards{
+  flex-basis: calc((100% - 90px) / 4);
 }
 
-
+.card__thumb{
+  position: relative;
+}
 
 .card__content {
   padding: 25px 25px;
@@ -320,9 +320,6 @@ h1 {
   color: var(--color-primary);
 }
 
-
-
-
 /* ------------goods---------------- */
 .goods {
   background-color: var(--bg-color-secondary);
@@ -340,12 +337,11 @@ h1 {
   background-size: contain;
   background-position: left center;
 }
-.goods__box {
+.goods__container {
   display: flex;
   justify-content: flex-end;
 }
-.goods__img {
-}
+
 .goods__content {
   width: calc((100% - 30px) / 2);
   align-self: center;
@@ -359,13 +355,11 @@ h1 {
   line-height: 1.2;
   margin-bottom: 30px;
 }
-.goods__content .goods__text:last-child {
+.goods__text--no-margin-bottom {
   margin-bottom: 0;
 }
 
 /* ------------course----------- */
-.course {
-}
 
 .course__overlay {
   max-width: 1440px;
@@ -451,8 +445,6 @@ h1 {
 }
 
 /* -----------FAQ---------------- */
-.faq {
-}
 .faq__title {
   margin-bottom: 55px;
 
@@ -517,9 +509,6 @@ h1 {
 }
 
 /* --------request--------- */
-.request {
-  
-}
 
 .request__overlay{
   max-width: 1440px;
@@ -566,9 +555,7 @@ h1 {
   gap: 15px;
   margin-bottom: 55px;
 }
-.filter__item {
-}
-.btn-filter {
+.btn__filter {
   padding: 6px 24px;
 
   background-color: var(--bg-color-filter);
@@ -580,17 +567,16 @@ h1 {
   background-color var(--transition-time) var(--transition-function),
   box-shadow var(--transition-time) var(--transition-function);
 }
-.btn-filter:hover,
-.btn-filter:focus {
+.btn__filter:hover,
+.btn__filter:focus {
   color: var(--color-primary);
    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.29);
 }
-
-.portfolio .card__item {
+.card-set__item--three-cards{
   flex-basis: calc((100% - 60px) / 3);
   transition: box-shadow var(--transition-time) var(--transition-function);
 }
-.portfolio .card__item:hover {
+.card-set__item--three-cards:hover {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -608,11 +594,11 @@ h1 {
   transform: translate(-100%, 0);
   transition: transform var(--transition-time) var(--transition-function);
 }
-.portfolio .card__item:hover  .product{
+.portfolio .card-set__item:hover  .product{
   transform: translate(0, 0);
 }
 
-.portfolio .card__content {
+.portfolio .card-set__content {
   text-align-last: left;
 
   padding: 15px 30px;
@@ -642,13 +628,9 @@ h1 {
   display: flex;
   justify-content: space-between;
 }
-.footer__content {
-}
 .footer__logo {
   margin-right: 0;
   margin-bottom: 30px;
-}
-.address {
 }
 .address__link {
   font-style: normal;
@@ -805,7 +787,7 @@ h1 {
   transition: border-color var(--transition-time) var(--transition-function);
 }
 
-.modal-icon{
+.modal-btn__icon{
   fill: var(--color-modal-btn);
   transition: fill var(--transition-time) var(--transition-function);
 }
@@ -813,12 +795,10 @@ h1 {
 .modal-btn:hover {
   border-color: var(--color-accent-link);
 }
-.modal-btn:hover .modal-icon{
+.modal-btn:hover .modal-btn__icon{
   fill: var(--color-accent-link);
 }
 
-.modal__form {
-}
 .modal__list {
   margin-bottom: 25px;
 }
@@ -897,6 +877,7 @@ h1 {
 .checkbox {
   display: flex;
   justify-content: center;
+  gap: 10px;
   margin-bottom: 20px;
 
   font-size: 14px;
@@ -910,7 +891,6 @@ h1 {
   align-items: center;
   width: 16px;
   height: 15px;
-  margin-right: 10px;
 
   border: 1px solid var(--color-secondary);
   border-radius: 4px;
