@@ -23,4 +23,13 @@ $(document).ready(function () {
     $("html, body").animate({ scrollTop: $(target).offset().top - 80 }, 800);
     return false;
   });
+   
+//   accordion
+  $(".faq__subtitle").click(function (event) {
+    if ($(".faq__list").hasClass("accordion")) {
+      $(".faq__subtitle").not($(this)).removeClass("active");
+      $(".faq__text").not($(this).next()).slideUp(400);
+    }
+    $(this).toggleClass("active").next().slideToggle(400);
+  });
 });
