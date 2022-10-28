@@ -1,8 +1,3 @@
-// $(function () {
-//   $("#accordion").accordion({
-//     event: "mouseover",
-//   });
-// });
 
 $(document).ready(function () {
   $('.faq__subtitle').click(function (event) {

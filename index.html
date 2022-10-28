@@ -27,7 +27,7 @@
                 <ul class="nav__list list">
                     <li class="nav__item"><a href="./index.html" class="nav__link">Головна</a></li>
                     <li class="nav__item"><a href="./goods.html" class="nav__link">Товари</a></li>
-                    <li class="nav__item"><a href="" class="nav__link">Програми тренувань</a></li>
+                    <li class="nav__item"><a href="#course" class="nav__link">Програми тренувань</a></li>
                 </ul>
             </nav>
             <ul class="contacts list">
@@ -148,7 +148,7 @@
 
             <div class="course__overlay">
                 <div class="container section">
-                    <h2 class="title course__title">ПРОГРАМИ І ЕТАПИ</h2>
+                    <h2 id="course" class="title course__title">ПРОГРАМИ І ЕТАПИ</h2>
 
                     <div class="course__box">
                         <div class="course__content">
@@ -343,6 +343,12 @@
 
             </div>
         </div>
+
+        <button class="btn-scroll" type="button">
+            <svg class="btn-scroll__icon" width="25" height="25">
+                <use href="./images/icons.svg#shift"></use>
+            </svg>
+        </button>
     </main>
 
     <footer class="footer">
@@ -403,14 +409,9 @@
     <!--  -->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    <script src="./js/accordion.js">
-        // $(function () {
-        //     $("#accordion").accordion({
-        //         event: "mouseover"
-        //     });
-        // });
-    </script>
+    <script src="./js/accordion.js"></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/smoothScroll.js"></script>
 </body>
 
 </html>

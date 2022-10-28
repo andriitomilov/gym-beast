@@ -743,8 +743,9 @@ h1 {
   background-color: #ffffff;
 
   transform: translate(-50%, -50%) scale(1);
-  transition: transform var(--transition-time) var(--transition-function), opacity var(--transition-time) var(--transition-function);
+  transition: transform var(--transition-time) var(--transition-function), opacity var(--transition-time) var(--transition-function), visibility var(--transition-time) var(--transition-function);
   opacity: 1;
+  visibility: visible;
 }
 
 .modal__title{
@@ -757,6 +758,7 @@ h1 {
 
 .is-hidden{
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
 }
 
@@ -926,4 +928,45 @@ h1 {
   padding: 15px;
 
   border-radius: 10px;
+}
+
+
+/* ---------------UP-BUTTON-------------- */
+
+.btn-scroll{
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 10px;
+
+  background-color: rgb(255, 0, 138, 0.3);
+
+  transition: background-color var(--transition-time) var(--transition-function);
+}
+
+.btn-scroll__icon{
+  fill: rgba(255, 255, 255, 0.6);
+  transition: fill var(--transition-time) var(--transition-function);
+}
+
+.btn-scroll:hover {
+  background-color: var(--color-accent-link);
+}
+
+.btn-scroll:hover .btn-scroll__icon{
+  fill: var(--bg-color-secondary);
+}
+
+.btn-scroll.show{
+  display: flex;
 }
