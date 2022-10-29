@@ -32,4 +32,5 @@ $(document).ready(function () {
     }
     $(this).toggleClass("active").next().slideToggle(400);
   });
+
 });

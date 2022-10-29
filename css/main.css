@@ -860,7 +860,8 @@ h1 {
   transform: translate(-40px, -45px);
 }
 .modal__input:focus ~ .modal__icon,
-.modal__input:not(:placeholder-shown) ~ .modal__icon{
+.modal__input:not(:placeholder-shown) ~ .modal__icon,
+.modal__input:hover ~ .modal__icon {
   fill: var(--color-accent-link);
 }
 
